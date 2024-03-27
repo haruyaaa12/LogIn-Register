@@ -1,33 +1,71 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
-}
-
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  font-family: Arial, sans-serif;
 }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
+.container {
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+  border: 1px solid black;
+  border-radius: 10px;
+  background-color: #f9f9f9;
 }
+
+h2 {
+  color: black;
+  text-align: center;
+}
+
+button {
+  background-color: black;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  display: block; 
+  margin: 0 auto;
+}
+
+button:hover {
+  background-color: #333;
+}
+
+form {
+  display: none;
+}
+
+form.active {
+  display: block;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="date"] {
+  width: 100%;
+  padding: 10px;
+  margin: 5px 0;
+  border: 1px solid black;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+span {
+  color: red;
+  font-size: 12px;
+}
+
+button.outside-container {
+  background-color: black;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+  margin: 30px;
+}
+
+.button-container {
+  display: flex;
+  justify-content: center;
+}
+
